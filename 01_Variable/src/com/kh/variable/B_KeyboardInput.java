@@ -133,10 +133,10 @@ public class B_KeyboardInput {
 		String str = "Hello";
 		// 변수에 기록하여 출력하는 방식
 		char ch = str.charAt(0);	//h
-//		System.out.println(ch);
+		System.out.println(ch);
 		
 		// 바로 출력하는 방식
-//		System.out.println(str.charAt(3));
+		System.out.println(str.charAt(3));
 
 		// 존재하지 않는 인덱스 : 오류발생!!
 //		System.out.println(str.charAt(12));	//string index out of range

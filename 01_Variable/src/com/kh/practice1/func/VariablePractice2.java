@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class VariablePractice2 {
 	
-	public void Calc() {
+	public void calc() {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("첫 번째 정수 : ");
@@ -18,6 +18,6 @@ public class VariablePractice2 {
 		System.out.println("곱하기 결과 : " + (firstNum * secondNum));
 		System.out.println("나누기 몫 결과 : " + (firstNum / secondNum));
 		
+		sc.close();
 	}
-
 }
