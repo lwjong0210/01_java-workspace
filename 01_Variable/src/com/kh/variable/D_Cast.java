@@ -100,7 +100,7 @@ public class D_Cast {
 		
 		// double(8byte) => float(4byte)
 		double d1 = 4.0;
-//		float f1 = d1;
+//		float f1 = d1;	//오류
 		float f1 = (float)d1;
 		// 강제형변환 안해주면 오류남 ! 명시적으로 형변환 해줘야함
 		
@@ -121,7 +121,7 @@ public class D_Cast {
 		int iSum2 = iNum + (int)dNum;	// 10 + 5 = 15
 		System.out.println("iSum2 : " + iSum2);	// 형변환 통해서 정수값만 출력된다. 데이터 손실 발생
 		// 출력값 : iSum2 : 15
-		// 실수 값을 정수형으로 강제형변환시 소수점 아래 부분은 버려짐.(* 데이터 손실 발생할  수 있다.)
+		// 실수 값을 정수형으로 강제형변환시 소수점 아래 부분은 버려짐.(* 데이터 손실이 발생할 수 있다.)
 		
 		// 방법3. 연산결과를 아싸리 double 변수에 대입
 		double iSum3 = iNum + dNum;
@@ -130,7 +130,7 @@ public class D_Cast {
 		// ** 데이터 손실 테스트
 		int iNum2 = 290;	
 		byte bNum2 = (byte)iNum2;	// byte(-128 ~ 127)
-		System.out.println("bNum2 : " + bNum2);	// 풀력값 : bNum2 : 34
+		System.out.println("bNum2 : " + bNum2);	// 출력값 : bNum2 : 34
 		
 		
 	}
