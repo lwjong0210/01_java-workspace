@@ -2,6 +2,8 @@ package com.kh.run;
 
 import com.kh.variable.A_Variable;
 import com.kh.variable.B_KeyboardInput;
+import com.kh.variable.C_Printf;
+import com.kh.variable.D_Cast;
 
 public class Run {
 	public static void main(String[] args) {
@@ -14,9 +16,16 @@ public class Run {
 		// 클래스명 별칭 = new 클래스명 ();
 //		b.inputTest1();
 //		b.inputTest2();
-		b.inputTest3();
+//		b.inputTest3();
 //		b.inputTest4();
 //		b.charAtTest();
+		
+		C_Printf c = new C_Printf();
+//		c.printfTest();
+		
+		D_Cast d = new D_Cast();
+		d.autoCasting();
+		
 	}
 
 }

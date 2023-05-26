@@ -4,11 +4,13 @@ package com.kh.practice1.func;
 import java.util.Scanner;
 
 public class VariablePractice1 {
-	
+		
+		// 0. 메소드 생성
 	public void userInfo() {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		// 2. 가이드 문구 출력 및 입력받기
 		System.out.print("이름을 입력하세요 : ");
 		String name = sc.nextLine();
 		
@@ -21,8 +23,10 @@ public class VariablePractice1 {
 		System.out.print("키를 입력하세요(cm) : ");
 		double height = sc.nextDouble();
 		
+		// 3. 출력
 		System.out.print("키 " + height + "cm인 " + age + "살 " + gender + "자 " + name + "님 반갑습니다^^");
 		
+		// 4. 스캐너 반납
 		sc.close();
 	}
 
