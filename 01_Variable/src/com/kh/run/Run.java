@@ -14,9 +14,9 @@ public class Run {
 		// 클래스명 별칭 = new 클래스명 ();
 //		b.inputTest1();
 //		b.inputTest2();
-//		b.inputTest3();
+		b.inputTest3();
 //		b.inputTest4();
-		b.charAtTest();
+//		b.charAtTest();
 	}
 
 }

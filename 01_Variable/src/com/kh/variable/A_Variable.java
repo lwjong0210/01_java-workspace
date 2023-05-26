@@ -47,7 +47,7 @@ public class A_Variable {
 	public void declearVariable() {
 			
 			
-			/* 값을 기록하기 위한 변수를 메모리 공간에 확보, 할당한다. \ㅈ?
+			/* 값을 기록하기 위한 변수를 메모리 공간에 확보, 할당한다.
 			 * 
 			 * [표현법] 자료형 변수이름;
 			 * 
@@ -106,7 +106,7 @@ public class A_Variable {
 			System.out.println("iNum 의 값 : " + iNum);	
 			System.out.println("lNum 의 값 : " + lNum);	
 			System.out.println("fNum 의 값 : " + fNum);	
-			System.out.println("dNum) 의 값 : " + dNum);	
+			System.out.println("dNum 의 값 : " + dNum);	
 			System.out.println("ch 의 값 : " + ch);	
 			System.out.println("kim 의 값 : " + kim);	
 			System.out.println("str의 값 : " + str);	

@@ -20,6 +20,4 @@ public class VariablePractice3 {
 		sc.close();
 	}
 	
-	
-
 }
