@@ -22,7 +22,7 @@ public class C_Printf {
 		int iNum2 = 20;
 		
 		// "10 20"
-		System.out.println(iNum1 + " " + iNum2);
+		System.out.println(iNum1 + " " + iNum2);	// 다른자료형 + 문자열 = 문자열
 		System.out.println(iNum1 + iNum2);
 		
 		System.out.printf("%d%d", iNum1,iNum2);

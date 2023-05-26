@@ -137,7 +137,7 @@ public class A_Variable {
 			// 대소문자 구분
 			int numBer;	// 이건 된다.
 		
-			// 2) 예약어(자바에서 사용되고 있는 키워드)	안된다.
+			// 2) 예약어(자바에서 사용되고 있는 키워드	안된다.
 //			int true;
 //			int abstract;
 //			int class;

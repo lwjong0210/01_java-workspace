@@ -7,7 +7,7 @@ public class VariablePractice1 {
 		
 		// 0. 메소드 생성
 	public void userInfo() {
-		
+		// 1. 스캐너 생성
 		Scanner sc = new Scanner(System.in);
 		
 		// 2. 가이드 문구 출력 및 입력받기

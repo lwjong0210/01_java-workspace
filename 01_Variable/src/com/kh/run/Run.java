@@ -24,7 +24,8 @@ public class Run {
 //		c.printfTest();
 		
 		D_Cast d = new D_Cast();
-		d.autoCasting();
+//		d.autoCasting();
+		d.forceCasting();
 		
 	}
 
