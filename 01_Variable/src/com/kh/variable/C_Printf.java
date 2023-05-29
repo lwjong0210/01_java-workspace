@@ -2,6 +2,7 @@ package com.kh.variable;
 
 
 public class C_Printf {
+	
 	public void printfTest() {
 		
 //		System.out.print(출력하고자 하는 값); // 출력만함 (줄바꿈 발생x)

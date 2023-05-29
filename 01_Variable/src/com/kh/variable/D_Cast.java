@@ -1,7 +1,5 @@
 package com.kh.variable;
 
-import java.security.PublicKey;
-
 public class D_Cast {
 	/*
 	 * 형변환 : 값의 자료형을 바꾸는 것
