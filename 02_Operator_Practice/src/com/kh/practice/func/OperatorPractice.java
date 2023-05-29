@@ -188,7 +188,6 @@ public class OperatorPractice {
 		System.out.println("C사원 연봉/연봉+a : " + c + "/" + (double)(c += c * 0.15));	
 		System.out.println(c >= 3000 ? "3000 이상" : "3000 미만");
 
-		
 		sc.close();
 	}
 }

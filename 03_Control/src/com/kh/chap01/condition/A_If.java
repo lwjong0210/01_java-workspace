@@ -227,5 +227,6 @@ public class A_If {
 		}else {
 			System.out.println("양수가 아닙니다. 잘못입력하셨습니다.");
 		}
+		sc.close();
 	}
 }
