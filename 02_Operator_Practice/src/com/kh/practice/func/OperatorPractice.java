@@ -179,19 +179,16 @@ public class OperatorPractice {
 		int c = sc.nextInt();
 		System.out.println("");
 		
-		double aResult =  a + a * 0.4;
-		System.out.println("A사원 연봉/연봉+a : " + a + "/" + aResult);
-		System.out.println(aResult >= 3000 ? "3000 이상" : "3000 미만");
+		System.out.println("A사원 연봉/연봉+a : " + a + "/" + (double)(a += a * 0.4));
+		System.out.println(a >= 3000 ? "3000 이상" : "3000 미만");
 		
-		double bResult = b;
-		System.out.println("B사원 연봉/연봉+a : " + b + "/" + bResult);
-		System.out.println(bResult >= 3000 ? "3000 이상" : "3000 미만");
+		System.out.println("B사원 연봉/연봉+a : " + b + "/" + (double)(b));
+		System.out.println(b >= 3000 ? "3000 이상" : "3000 미만");
+
+		System.out.println("C사원 연봉/연봉+a : " + c + "/" + (double)(c += c * 0.15));	
+		System.out.println(c >= 3000 ? "3000 이상" : "3000 미만");
 
 		
-		double cResult = c + c * 0.15;
-		System.out.println("C사원 연봉/연봉+a : " + c + "/" + cResult);	
-		System.out.println(cResult >= 3000 ? "3000 이상" : "3000 미만");
-
 		sc.close();
 	}
 }
