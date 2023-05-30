@@ -65,6 +65,7 @@ public class B_Switch {
 		}
 		sc.close();
 	}
+	
 	public void method2() {
 		Scanner sc = new Scanner(System.in);
 		
