@@ -10,7 +10,7 @@ public class Run {
 //		p.practice2();
 //		p.practice3();
 //		p.practice4();
-//		p.practice5();
+		p.practice5();
 //		p.practice6();
 //		p.practice7();
 //		p.practice8();
@@ -19,6 +19,6 @@ public class Run {
 //		p.practice11();
 //		p.practice12();
 //		p.practice13();
-		p.practice14();
+//		p.practice14();
 	}
 }
