@@ -63,7 +63,7 @@ public class CompExample {
 				continue;			}
 		}
 		System.out.printf("%s 안에 포함된 %s 개수 : %d", str, str1,result);
-		
+		sc.close();
 	}
 	
 	public void practice4() {
@@ -100,15 +100,5 @@ public class CompExample {
 		}
 		sc.close();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

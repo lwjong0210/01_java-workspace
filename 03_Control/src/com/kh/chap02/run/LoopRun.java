@@ -17,7 +17,7 @@ public class LoopRun {
 //		a.method7();
 //		a.msethod8();
 //		a.method9();
-//		a.method10();
+		a.method10();
 //		a.method11();
 //		a.method12();
 //		a.method13();
@@ -38,7 +38,7 @@ public class LoopRun {
 		C_DoWhile c = new C_DoWhile();
 //		c.method1();
 //		c.method2();
-		c.method3();
+//		c.method3();
 	}
 
 }

@@ -218,15 +218,16 @@ public class LoopPractice {
 				break;
 			}
 		}
+		sc.close();
 	}
 
 	public void practice12() {
 		Scanner sc = new Scanner(System.in);
 		while (true) {
-			
+
 			System.out.print("연산자(+, -, *, /, %)");
 			String op = sc.nextLine();
-			
+
 			if (op.equals("exit")) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
@@ -268,27 +269,27 @@ public class LoopPractice {
 		}
 		sc.close();
 	}
-	
+
 	public void practice13() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 입력 : ");
 		int num = sc.nextInt();
-		for(int j = 1; j <= num; j++) {
-			for(int i = 1; i <= j; i++) {
+		for (int j = 1; j <= num; j++) {
+			for (int i = 1; i <= j; i++) {
 				System.out.print("*");
 			}
 			System.out.println("");
 		}
 		sc.close();
 	}
-	
+
 	public void practice14() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 입력 : ");
 		int num = sc.nextInt();
-		
-		for(int j = num; j > 0; j--) {
-			for(int i = j; i > 0; i--) {
+
+		for (int j = num; j > 0; j--) {
+			for (int i = j; i > 0; i--) {
 				System.out.print("*");
 			}
 			System.out.println("");
