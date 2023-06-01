@@ -12,7 +12,7 @@ public class B_Continue {
 		// for문으로 1부터 10까지 홀수 출력
 
 //		for(int i= 1; i <=10; i++) {
-//			if(i % 2 == 1) {
+//			if(i % 2 == 1) {	// i값이 홀수일 경우
 //				System.out.print(i + " ");
 //			}
 //		}
@@ -57,6 +57,15 @@ public class B_Continue {
 					System.out.printf("%d x %d = %d\n",dan,i,dan*i);
 				}
 			}
+		}
+	}
+	public void method4() {
+		for(int i=0;i<5;i++){
+		    if(i == 2) {
+		    	break;
+//		    	continue;
+		    }
+		    System.out.println("Hello, world");
 		}
 	}
 }

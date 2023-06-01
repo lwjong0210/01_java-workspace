@@ -13,7 +13,8 @@ public class BranchRun {
 		B_Continue b = new B_Continue();
 //		b.method1();
 //		b.method2();
-		b.method3();
+//		b.method3();
+		b.method4();
 	}
 	
 }

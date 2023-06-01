@@ -93,7 +93,7 @@ public class A_Array {
 	
 	public void method2() {
 		int i = 10;
-		
+		String a = "hi";
 		
 		// 배열 선언과 동시에 할당
 		int[] iArr = new int[5];
@@ -135,7 +135,7 @@ public class A_Array {
 			System.out.println(dArr[i]);
 		}
 		
-		// 내가 각 인덱스에 초기화(ㄱ값대입)를 하지 않아도 값들이 담겨있음!! 왜일까?
+		// 내가 각 인덱스에 초기화(값 대입)를 하지 않아도 값들이 담겨있음!! 왜일까?
 		// Heap이라는 공간에 절대 빈공간이 존재할 수 없음!!
 		// => 따라서 공간이 만들어질때 JVM(자바가상머신)이 기본적으로 초기화(값대입)를 진행해줌
 	}
@@ -172,7 +172,7 @@ public class A_Array {
 			System.out.println(arr[i]);
 		}
 		
-		// 배열 크기 변경 요청 => 10으로 = 안됨. 다시만들어야함
+		// 배열 크기 변경 요청 => 10으로 => 안됨. 다시만들어야함
 		
 	}
 	
@@ -206,6 +206,7 @@ public class A_Array {
 		for(int i = 0; i < arr.length; i++) {
 			arr[i] = 2*(i + 1);
 			System.out.println(arr[i]);
+		}
 		 */
 		
 		/*	// 가능은 함
@@ -256,9 +257,9 @@ public class A_Array {
 		//[표현법2] *****
 		int[] arr2 = {1, 2, 3, 4};
 		
-		System.out.println("arr1이랑 arr2가 같나요? : " + (arr1 == arr2));	// false 주소를 비교
+		System.out.println("arr1이랑 arr2가 같나요? : " + (arr1 == arr2));	// false, 주소를 비교
 		// 각각의 변수에 담겨있는 주소값을 비교하기 때문
-		System.out.println("arr1이랑 arr2가 같나요? : " + (arr1[0] == arr2[0]));	// true	값을 비교
+		System.out.println("arr1이랑 arr2가 같나요? : " + (arr1[0] == arr2[0]));	// true, 값을 비교
 	}
 	
 	public void method8() {
@@ -280,7 +281,7 @@ public class A_Array {
 	
 	public void method9() {
 		// 1. 사용자에게 배열의 길이를 입력을 받은 후
-		//		 헤당 그 크기만큼의 문자열 배열 생성
+		//		 해당 그 크기만큼의 문자열 배열 생성
 		Scanner sc = new Scanner(System.in);
 	
 		System.out.print("배열의 길이 : ");
@@ -304,7 +305,7 @@ public class A_Array {
 	}
 	
 	public void method10() {
-		// 사용자에게 문자열 하나 입력받은 
+		// 사용자에게 문자열 하나 입력받음
 		// 각각의 인덱스에 있는 문자들은 char 배열에 옮겨담기
 		
 		// 1. 사용자에게 문자열 입력받기
