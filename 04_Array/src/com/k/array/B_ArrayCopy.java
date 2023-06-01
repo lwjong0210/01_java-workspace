@@ -1,5 +1,9 @@
 package com.k.array;
 
+import java.util.Arrays;
+
+//import java.lang; => 알게모르게 포함되어있음
+
 public class B_ArrayCopy {
 	// 배열 복사
 	public void method1() {
@@ -80,6 +84,7 @@ public class B_ArrayCopy {
 		System.out.println("origin주소값 : " + origin.hashCode());
 		System.out.println("copy주소값 : " + copy.hashCode());
 	}
+	
 	public void method3() {
 		// 2. 아싸리 새로운 배열 생성 후 System 이라는 클래스에서의 arraycopy() 메소드를 이용한 복사
 		int[] origin = {1,2,3,4,5};
@@ -93,5 +98,58 @@ public class B_ArrayCopy {
 		for(int i = 0; i < copy.length; i ++) {
 			System.out.print(copy[i] + " ");
 		}
+		System.out.println();
+		System.out.println("origin주소값 : " + origin.hashCode());
+		System.out.println("copy주소값 : " + copy.hashCode());
+		// 주소값이 다름 (깊은복사)
+		// => 각자 다른 배열 참조하고 있음
+		// => 즉, 배열 수정시 서로에게 영향을 주지 않음
+	}
+	
+	public void method4() {
+		// 3. Arrays 클래스에서 제공하는 copyOf() 메소드 사용
+		int[] origin = {1,2,3,4,5};
+		// 복사본 배열 = Arrays.copyOf(원본배열명, 복사할길이);
+//		int[] copy = Arrays.copyOf(origin, 5);	// 1 2 3 4 5
+//		int[] copy = Arrays.copyOf(origin, 3);	// 1 2 3 
+		int[] copy = Arrays.copyOf(origin, 10);	// 1 2 3 4 5 0 0 0 0 0
+		/*
+		 * [참고]
+		 * java.lang.Math
+		 * java.lang.String
+		 * java.lang.System
+		 * => java.lang 패키지에 있는 클래스들을 쓸 때는 import 안해도 됨!!
+		 * 
+		 * java.util.Scanner
+		 * java.util.Arrays
+		 * => java.lang 이외의 패키지에 있는 클래스들을 쓸 때는 무조건 import 해야됨!
+		 */
+		for(int i = 0; i < copy.length; i ++) {
+			System.out.print(copy[i] + " ");
+		}
+		System.out.println();
+
+		/*
+		 * Arrays.copyOf()메소드
+		 * => 내가 제시한 길이 만큼 복사본 배열 크기 할당
+		 * => 단, 내가 제시한 길이가 원본배열ㅇ의 크기보다 클 경우 기존의 배열에 있는 값은 다 복사
+		 * => 내가 제시한 길이가 원본배열의 크기보다 작을 경우 기존의 배열에 있는 값 내가 제시한 길이만큼만 복사
+		 */
+		System.out.println("origin주소값 : " + origin.hashCode());
+		System.out.println("copy주소값 : " + copy.hashCode());
+	}
+	
+	public void method5() {
+		// 4. clone() 메소드 이용한 복사 - 가장많이씀
+		//	  인덱스 지정불가, 크기 지정 별도로 못함
+		int[] origin = {1,2,3,4,5};
+		// 복사본 배열 = 원본배열.clone();
+		int[] copy = origin.clone();
+		for(int i = 0; i < copy.length; i ++) {
+			System.out.print(copy[i] + " ");
+		}
+		System.out.println();
+		System.out.println("origin주소값 : " + origin.hashCode());
+		System.out.println("copy주소값 : " + copy.hashCode());
 	}
 }
