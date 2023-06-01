@@ -221,6 +221,7 @@ public class ControlPractice {
 		System.out.println(num1 + " " + op + " " + num2 + " = " + result);
 		sc.close();
 	}
+	
 	public void practice9() {
 		Scanner sc = new Scanner(System.in);
 		
