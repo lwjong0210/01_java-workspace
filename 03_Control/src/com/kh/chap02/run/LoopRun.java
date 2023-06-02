@@ -17,7 +17,7 @@ public class LoopRun {
 //		a.method7();
 //		a.msethod8();
 //		a.method9();
-		a.method10();
+//		a.method10();
 //		a.method11();
 //		a.method12();
 //		a.method13();
@@ -32,7 +32,7 @@ public class LoopRun {
 //		b.method2();
 //		b.method3();
 //		b.method4();
-//		b.practice7While();
+		b.method7While();
 //		b.method5();
 		
 		C_DoWhile c = new C_DoWhile();
