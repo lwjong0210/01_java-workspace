@@ -177,16 +177,16 @@ public class ArrayPractice {
 		String num = sc.nextLine();
 		
 		char[] arr = new char[14];
+		
 		for(int i = 0; i < num.length(); i++) {
 			arr[i] = num.charAt(i);
 		}
-		for(int i = 0; i < arr.length; i++) {
-			if(i < 8) {
-				System.out.print(arr[i]);
-			}else {
-				System.out.print("*");
-			}
+		char[] copy = arr.clone();
+		
+		for(int i = 7; i < copy.length; i++) {
+			copy[i] = '*';
 		}
+		System.out.println(copy);
 		
 	}
 	
@@ -288,9 +288,77 @@ public class ArrayPractice {
 	}
 	
 	public void practice15() {
+		Scanner sc = new Scanner(System.in);
 		
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+		
+		char[] arr = new char[str.length()];	// 문자가 전부 들어간 상태
+		// 여기서 중복 값이 없게 뽑아줘야하는데...
+		for(int i = 0; i < str.length(); i++) {
+			arr[i] = str.charAt(i);
+			
+		}
+		
+		
+		
+		for(int i = 0; i < arr.length; i++) {
+
+			for(int j = 0; j <= i; j++) {
+				if(arr[i]==arr[j]) {
+					
+				}else {
+					System.out.print(arr[i] + " ");
+					break;
+				
+				}
+			}
+
+		}
 	}
 	
-	
+	public void practice16() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int num = sc.nextInt();
+		sc.nextLine();
+
+		for (int i = 0; i < num; i++) {
+			String[] arr = new String[num];
+
+			System.out.print(i + "번째 문자열 : ");
+			String str = sc.nextLine();
+			arr[i] = str;
+		}
+
+			while (true) {
+				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+				char yesNo = sc.nextLine().charAt(0);
+
+				if (yesNo == 'y' || yesNo == 'Y') {
+					System.out.print("더 입력하고 싶은 개수 : ");
+					int add = sc.nextInt();
+					String[] arr = new String[num += add];
+					for (int j = i; j < num; j++) {
+						arr[j] = arr[i];
+					}
+					for (int k = num; k < num + add; k++) {
+						System.out.println(k + "번째 문자열 : ");
+						String strAdd = sc.nextLine();
+						arr[k] = strAdd;
+					}
+
+				} else {
+					break;
+				}
+				for (int m = 0; m < arr.length; m++) {
+					System.out.print(arr[m]);
+				}
+			}
+
+		
+
+	}
 
 }
