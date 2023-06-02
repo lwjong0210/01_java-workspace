@@ -248,6 +248,43 @@ public class ArrayPractice {
 	
 	public void practice14() {
 		
+		int[] lotto = new int[6];
+		
+		for(int i = 0; i < lotto.length; i++) {
+			int random = (int)(Math.random()*45+1);
+			lotto[i] = random;
+			
+			for(int j = 0; j < i; j++) {
+				if(lotto[i] == lotto[j]) {
+					i--;
+					break;
+				}
+			}
+		}
+		for(int i = 0; i < lotto.length; i++) {
+			System.out.print(lotto[i] + " ");
+		}
+		System.out.println();
+		
+		int temp = 0;	// 임시저장소 .. 근데 이렇게 해도 되나...
+		for(int i = 0; i < lotto.length; i++) {
+			
+			for(int j = i; j < lotto.length; j++) {
+				if(lotto[i] > lotto[j]) {	// 만약 45 > 10 이면
+					temp = lotto[i];	// 45는 임시저장소
+				
+					lotto[i] = lotto[j];	// 앞에 자리에 10 이들어가고
+
+					lotto[j] = temp;	// 뒤에 45가 들어간다.
+				}
+			}
+		}
+		
+		for(int i = 0; i < lotto.length; i++) {
+			System.out.print(lotto[i] + " ");
+		}
+	
+		
 	}
 	
 	public void practice15() {
