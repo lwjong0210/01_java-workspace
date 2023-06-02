@@ -1,7 +1,7 @@
 package com.kh.run;
 
-import com.k.array.A_Array;
-import com.k.array.B_ArrayCopy;
+import com.kh.array.A_Array;
+import com.kh.array.B_ArrayCopy;
 
 public class ArrayRun {
 	

@@ -1,4 +1,4 @@
-package com.k.array;
+package com.kh.array;
 
 import java.util.Scanner;
 
