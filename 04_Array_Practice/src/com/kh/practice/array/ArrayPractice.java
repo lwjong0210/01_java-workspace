@@ -80,7 +80,7 @@ public class ArrayPractice {
 	}
 	
 	public void practice6() {
-		char[] week = {'월','화','수','목','금','토','일'};	// char형 배열은 ""가 아닌 '' 써야 됌 
+		char[] week = {'월','화','수','목','금','토','일'};	// char형 배열은 ""가 아닌 '' 써야된다. 
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -165,10 +165,95 @@ public class ArrayPractice {
 		if(yesNo == 0) {
 			System.out.println(food + "은(는) 없는 메뉴입니다.");
 		}else {
-			System.out.println(food + "은(는) 있는 메뉴입니다.");
+			System.out.println(food + "치킨 배달 가능");
 		}
 		
 	}	// return; 사용해보기.
+	
+	public void practice10() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("주민등록번호(-포함) : ");
+		String num = sc.nextLine();
+		
+		char[] arr = new char[14];
+		for(int i = 0; i < num.length(); i++) {
+			arr[i] = num.charAt(i);
+		}
+		for(int i = 0; i < arr.length; i++) {
+			if(i < 8) {
+				System.out.print(arr[i]);
+			}else {
+				System.out.print("*");
+			}
+		}
+		
+	}
+	
+	public void practice11() {
+		int[] arr = new int[10];
+		for(int i = 0; i < arr.length; i++) {
+			int random = (int)(Math.random()* 10 +1);
+			arr[i] = random;
+		}
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+	
+	public void practice12() {
+		int[] arr = new int[10];
+		
+		for(int i = 0; i < arr.length; i++) {
+			int random = (int)(Math.random() * 10 + 1);
+			arr[i] = random;
+		}
+		int max = arr[0];
+		int min = arr[0];
+		
+		for(int i = 0; i < arr.length-1; i++) {
+			if(arr[i] >= max) {
+				max = arr[i]; 
+			}
+			if(arr[i] <= min) {
+				min = arr[i];
+			}
+		}
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+ " ");
+		}
+		System.out.println();
+		System.out.println("최대 값 : " + max);
+		System.out.println("최소 값 : " + min);
+	}
+	
+	public void practice13() {	// ******참고했음
+		int[] arr = new int[10];
+		
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = (int)(Math.random()*10+1);
+			
+			for(int j = 0; j < i; j++) {
+				if(arr[i] == arr[j]) {
+					i--;
+					break;
+				}
+			}
+		}
+		
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+	
+	public void practice14() {
+		
+	}
+	
+	public void practice15() {
+		
+	}
+	
 	
 
 }
