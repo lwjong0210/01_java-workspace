@@ -1,5 +1,6 @@
 package com.kh.practice.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -76,7 +77,7 @@ public class ArrayPractice {
 		}
 		System.out.println();
 		System.out.println("i 개수 : " + count);
-
+		sc.close();
 	}
 	
 	public void practice6() {
@@ -115,7 +116,7 @@ public class ArrayPractice {
 		System.out.println();
 		System.out.println("총 합 : " + sum);
 		
-		
+		sc.close();
 	}
 	
 	public void practice8() {
@@ -146,6 +147,7 @@ public class ArrayPractice {
 				System.out.println("다시 입력하세요.");
 			}
 		}
+		sc.close();
 	}
 	public void practice9() {
 		Scanner sc = new Scanner(System.in);
@@ -167,6 +169,7 @@ public class ArrayPractice {
 		}else {
 			System.out.println(food + "치킨 배달 가능");
 		}
+		sc.close();
 		
 	}	// return; 사용해보기.
 	
@@ -187,6 +190,7 @@ public class ArrayPractice {
 			copy[i] = '*';
 		}
 		System.out.println(copy);
+		sc.close();
 		
 	}
 	
@@ -292,30 +296,37 @@ public class ArrayPractice {
 		
 		System.out.print("문자열 : ");
 		String str = sc.nextLine();
-		
-		char[] arr = new char[str.length()];	// 문자가 전부 들어간 상태
-		// 여기서 중복 값이 없게 뽑아줘야하는데...
-		for(int i = 0; i < str.length(); i++) {
-			arr[i] = str.charAt(i);
-			
-		}
-		
-		
+		char[] arr = new char[str.length()];
+		int count = 0;
 		
 		for(int i = 0; i < arr.length; i++) {
+			int same = 0;			// 중복체크 변수 선언, 0이면 다르다. 1이면 같다.
+			arr[i] = str.charAt(i);	// 어떤문자가 들어갔는지 배열에 저장 하고 출력이라기보단 
+									// 이건 배열에 저장하고 중복없이 출력
+									// 어떻게 수정하지..
 
-			for(int j = 0; j <= i; j++) {
-				if(arr[i]==arr[j]) {
-					
+			for(int j = 0; j < i; j++) {
+				if(arr[i] == arr[j]) {
+					same = 1;
 				}else {
-					System.out.print(arr[i] + " ");
-					break;
-				
+					continue;
 				}
+		
 			}
-
+			if(same == 0) {
+				if(i == 0) {
+					System.out.print("문자열에 있는 문자 : " + arr[i]);
+				}else {
+					System.out.print(", " + arr[i]);
+				}
+				count ++;	
+			}			
 		}
+		System.out.println();
+		System.out.println("문자 개수 : " + count);
+		sc.close();
 	}
+
 	
 	public void practice16() {
 		Scanner sc = new Scanner(System.in);
@@ -323,42 +334,50 @@ public class ArrayPractice {
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int num = sc.nextInt();
 		sc.nextLine();
+		String[] arr = new String[num];
 
 		for (int i = 0; i < num; i++) {
-			String[] arr = new String[num];
 
-			System.out.print(i + "번째 문자열 : ");
+			System.out.print(i+1 + "번째 문자열 : ");
 			String str = sc.nextLine();
 			arr[i] = str;
 		}
-
-			while (true) {
-				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
-				char yesNo = sc.nextLine().charAt(0);
-
-				if (yesNo == 'y' || yesNo == 'Y') {
-					System.out.print("더 입력하고 싶은 개수 : ");
-					int add = sc.nextInt();
-					String[] arr = new String[num += add];
-					for (int j = i; j < num; j++) {
-						arr[j] = arr[i];
-					}
-					for (int k = num; k < num + add; k++) {
-						System.out.println(k + "번째 문자열 : ");
-						String strAdd = sc.nextLine();
-						arr[k] = strAdd;
-					}
-
-				} else {
-					break;
-				}
-				for (int m = 0; m < arr.length; m++) {
-					System.out.print(arr[m]);
-				}
-			}
-
 		
-
+		int arrLength = 0;	// ************
+		
+		while(true) {
+			System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+			char yesNo = sc.nextLine().charAt(0);
+			
+			if (yesNo == 'y' || yesNo == 'Y') {
+				System.out.print("더 입력하고 싶은 개수 : ");
+				int add = sc.nextInt();
+				sc.nextLine();
+				
+				arr = Arrays.copyOf(arr, num += add);	// 배열은 확장이 안되므로 새로 만들어야함
+				
+				for(int i = num-add; i < arr.length; i++) {
+					System.out.print(i+1 + "번째 문자열 : ");
+					String strAdd = sc.nextLine();
+					arr[i] = strAdd;
+					arrLength = arr.length;
+					continue;
+				}
+				
+			}else if(yesNo == 'N' || yesNo == 'n'){
+				System.out.print("[");
+				for(int i = 0; i < arrLength; i++) {	// arr.length 가 if문의 {}안에서 선언된 지역변수라 여기에서 호출이안된다..
+														// 그래서 *******부분처럼 새로운 변수를 만들어서 대입
+					if(i < arrLength - 1) {
+						System.out.print(arr[i] + ", ");	// 어떻게 마지막 값 뒤에는 ,를 안붙이지?
+					}else {									// 이게 맞나 ? 
+						System.out.print(arr[i] + "]");
+					}
+				}
+				break;
+			}
+		}
+		sc.close();
 	}
 
 }
