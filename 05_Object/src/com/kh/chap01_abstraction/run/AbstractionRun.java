@@ -83,6 +83,7 @@ public class AbstractionRun {
 		
 		// arr[0] = 10; 
 		
+		// 문동은 학생 객체 만들기 => 문동은, 20, 162.3
 		moon.name ="문동은";
 		moon.age = 20;
 		moon.height = 162.3;

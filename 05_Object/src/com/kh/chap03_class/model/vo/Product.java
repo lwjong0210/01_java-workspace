@@ -30,4 +30,5 @@ public class Product {
 		return brand;
 	}
 
+
 }
