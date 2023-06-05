@@ -16,7 +16,8 @@ public class Run {
 //		uad.upDown();
 		
 		RockPaperScissors rps = new RockPaperScissors();
-		rps.rps();
+//		rps.rps();
+		rps.rps2();
 	}
 
 }

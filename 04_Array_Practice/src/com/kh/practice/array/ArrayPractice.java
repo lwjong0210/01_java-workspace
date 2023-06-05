@@ -149,6 +149,48 @@ public class ArrayPractice {
 		}
 		sc.close();
 	}
+	public void practice8_teacher() {
+		Scanner sc = new Scanner(System.in);
+		
+		// 조건 맞을때까지 반복 => while
+		while(true) {
+			// 정수 입력
+			System.out.print("정수 : ");
+			int num = sc.nextInt();
+			
+			if(num >= 3 && num % 2 == 1) {	// num이 3이상 홀수 일때만 작동
+				int[] arr = new int[num];
+				
+				/*
+				 * 5입력시 => {1,2,3,2,1}	=> 2번 인덱스까지 증가 그 이후로 감소
+				 * 7입력시 => {1,2,3,4,3,2,1}	=> 3번 인덱스까지 증가 그 이후로 감소
+				 * 9입력시 => 				=> 4번 인덱스까지 증가 그 이후로 감소
+				 * 							=> 배열의 길이 / 2 인덱스까지 증가 그 이후부터 감소
+				 */
+				int value = 1;
+				
+				for(int i = 0; i < arr.length; i++) {
+					arr[i] = value;
+					if(i < arr.length / 2) {
+						value ++;
+						
+					}else {
+						value--;
+					}
+				}
+				
+				for(int i = 0; i < arr.length; i++) {
+					System.out.print(arr[i] + " ");
+				}
+				break;
+				
+			}else {
+				System.out.println("다시 입력하세요.");
+			}
+		}
+		sc.close();
+	}
+	
 	public void practice9() {
 		Scanner sc = new Scanner(System.in);
 		String[] arr = {"양념", "후라이드", "순살"};
@@ -240,11 +282,25 @@ public class ArrayPractice {
 			for(int j = 0; j < i; j++) {
 				if(arr[i] == arr[j]) {
 					i--;
-					break;
 				}
 			}
 		}
 		
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+	
+	public void practice13_teacher() {
+		int[] arr = new int[10];
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = (int)(Math.random()*10+1);
+			for(int j = 0; j < i; j++){
+				if(arr[i] == arr[j]) {
+					i--;	// 랜덤한수를 다시 만드는 코드
+				}
+			}
+		}
 		for(int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
@@ -291,6 +347,7 @@ public class ArrayPractice {
 		
 	}
 	
+	
 	public void practice15() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -324,6 +381,43 @@ public class ArrayPractice {
 		}
 		System.out.println();
 		System.out.println("문자 개수 : " + count);
+		sc.close();
+	}
+	
+	public void practice15_teacher() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+		
+		char[] arr = new char[str.length()];
+		int count = 0;	// 문자 개수 출력
+		
+		System.out.print("문자열에 있는 문자 : ");
+		
+		for(int i = 0; i < arr.length; i++) {	// char 배열 값대입
+			arr[i] = str.charAt(i);
+			
+			// 중복제거 ?? 출력.. apple => a p l e
+			boolean flag = true;
+			
+			for(int j = 0; j < i; j++) {
+				if(arr[j] == arr[i]) {
+					flag = false;
+				}
+				
+			}
+			if(flag) {	// if(flag) == if(flag == true)
+				count ++ ;
+				if(i == 0) {
+					System.out.print(arr[i]);
+				}else {
+					System.out.print(", " + arr[i]);
+				}
+			}
+		}
+		System.out.println();
+		System.out.println(count);
 		sc.close();
 	}
 
@@ -376,6 +470,53 @@ public class ArrayPractice {
 				}
 				break;
 			}
+		}
+		sc.close();
+	}
+	
+	public void practice16_teacher() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		String[] origin = new String[num];
+		String[] copy = null;
+		sc.nextLine();
+		
+		for(int i = 0; i < origin.length; i++) {
+			System.out.printf("%d번째 문자열 : ", i+1);
+			origin[i] = sc.nextLine();
+		}
+		while(true) {
+			System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+			char ch = sc.nextLine().charAt(0);	// y Y n N
+			
+			if(ch == 'y' || ch == 'Y') {	// 더 입력하겠다는 경우
+				System.out.print("더 입력하고 싶은 개수 : ");
+				num = sc.nextInt();	// num 또 써도 됨
+				
+				copy = Arrays.copyOf(origin,origin.length + num);
+				sc.nextLine();
+				
+				for(int i = origin.length; i < copy.length; i++) {
+					System.out.printf("%d번째 문자열 : ", i+1);
+					copy[i] = sc.nextLine();
+				}
+				
+				origin = copy;	// origin의 주소값을 바꿔줌
+			}else {	// 그만하는 경우
+				System.out.print("[");
+				for(int i = 0; i < copy.length; i++) {
+					if(i == copy.length - 1) {	// 마지막 인덱스인경우
+						System.out.printf("%s", copy[i]);
+					}else {
+						System.out.printf("%s, ",copy[i]);
+					}
+				}
+				System.out.print("]");
+				break;
+			}
+			
 		}
 		sc.close();
 	}

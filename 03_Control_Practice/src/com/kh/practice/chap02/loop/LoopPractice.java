@@ -225,8 +225,7 @@ public class LoopPractice {
 		// 스캐너 선언
 		Scanner sc = new Scanner(System.in);
 		while (true) {
-			
-			// 1. 
+		
 			System.out.print("연산자(+, -, *, /, %) : ");
 			String op = sc.nextLine();
 
@@ -243,25 +242,24 @@ public class LoopPractice {
 
 			int result = 0;
 
-			if (op.equals("+")) {
+			if (op.equals("/") && num2 == 0) {
+				System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+				continue;
+			} else if (op.equals("/")) {
+				result = num1 / num2;
+				
+			} else if (op.equals("+")) {	
 				result = num1 + num2;
+				
 			} else if (op.equals("-")) {
 				result = num1 - num2;
 
 			} else if (op.equals("*")) {
 				result = num1 * num2;
 
-			} else if (op.equals("/")) {
-				if (num2 == 0) {
-					System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
-					sc.nextLine();
-					continue;
-				}else {
-					result = num1 / num2;
-				}
-
 			} else if (op.equals("%")) {
 				result = num1 % num2;
+				
 			} else {
 				System.out.println("없는 연산자입니다. 다시 입력해주세요.");
 				sc.nextLine();
@@ -272,6 +270,7 @@ public class LoopPractice {
 		}
 		sc.close();
 	}
+	
 
 	public void practice13() {
 		Scanner sc = new Scanner(System.in);

@@ -14,14 +14,18 @@ public class Run {
 //		p.practice6();
 //		p.practice7();
 //		p.practice8();
+//		p.practice8_teacher();
 //		p.practice9();
 //		p.practice10();
 //		p.practice11();
 //		p.practice12();
 //		p.practice13();
+//		p.practice13_teacher();
 //		p.practice14();
-		p.practice15();
+//		p.practice15();
+//		p.practice15_teacher();
 //		p.practice16();
+		p.practice16_teacher();
 	}
 
 }
