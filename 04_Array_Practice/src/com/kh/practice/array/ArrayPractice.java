@@ -506,7 +506,7 @@ public class ArrayPractice {
 				origin = copy;	// origin의 주소값을 바꿔줌
 			}else {	// 그만하는 경우
 				System.out.print("[");
-				for(int i = 0; i < copy.length; i++) {
+				for(int i = 0; i < origin.length; i++) {
 					if(i == copy.length - 1) {	// 마지막 인덱스인경우
 						System.out.printf("%s", copy[i]);
 					}else {
