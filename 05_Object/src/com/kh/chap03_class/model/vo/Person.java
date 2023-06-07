@@ -45,7 +45,7 @@ public class Person {
 		return id;
 	}
 
-	public String setPwd() {
+	public String getPwd() {
 		return pwd;
 	}
 
@@ -67,6 +67,10 @@ public class Person {
 
 	public String getEmail() {
 		return email;
+	}
+	
+	public String information() {
+		return "Id : " + id + ", Pwd : " + pwd + ", Name : " + name+ ", Age : " + age + ", Gender : " + gender + ", Phone : " + phone + ", email : " + email;
 	}
 
 }
