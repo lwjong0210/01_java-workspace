@@ -15,7 +15,7 @@ public class ClassRun {
 		System.out.println(p.getGender());
 		
 		// 생성 후에 필드에 담긴값을 곧바로 알아보면
-		// JVM이 푁화(값 세팅)까지 진행해줬음!!
+		// JVM이 초기화(값 세팅)까지 진행해줬음!!
 		
 		
 		p.setId("user01");
@@ -34,6 +34,7 @@ public class ClassRun {
 		System.out.println(p.getGender());
 		System.out.println(p.getPhone());
 		System.out.println(p.getEmail());
+		// 위의 코드는 너무 귀찮다. 그래서 information 메소드를 생성하고 간단하게 출력해보자.
 		System.out.println("=== 메소드 만들고 난 후 ===");
 		System.out.println(p.information());
 		
@@ -75,7 +76,7 @@ public class ClassRun {
 		System.out.println("=================");
 		System.out.println();
 		
-		// pName : xxx, price : xxx, brand : xxx
+		// pName : xxx, price : xxx, brand : xxx로 출력하고싶다
 		System.out.println("pName : " + iPhone.getpName() + ", price : " + iPhone.getPrice() + ", brand : " + iPhone.getBrand());
 		System.out.println("pName : " + galaxy.getpName() + ", price : " + galaxy.getPrice() + ", brand : " + galaxy.getBrand());
 		System.out.println("pName : " + vega.getpName() + ", price : " + vega.getPrice() + ", brand : " + vega.getBrand());

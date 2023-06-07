@@ -69,6 +69,7 @@ public class Person {
 		return email;
 	}
 	
+	// 정보를 출력해주는 information 메소드
 	public String information() {
 		return "Id : " + id + ", Pwd : " + pwd + ", Name : " + name+ ", Age : " + age + ", Gender : " + gender + ", Phone : " + phone + ", email : " + email;
 	}

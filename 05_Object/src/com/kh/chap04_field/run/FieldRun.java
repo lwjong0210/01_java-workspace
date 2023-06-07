@@ -6,13 +6,13 @@ public class FieldRun {
 
 	public static void main(String[] args) {
 
-		// ------------------ FielfTest1 ------------------ 
+		// ------------------ FieldTest1 ------------------ 
 		/*
 		FieldTest1 f1 = new FieldTest1();
 		f1.test(10);
 		*/
 		
-		// ------------------ FielfTest2 ------------------ 
+		// ------------------ FieldTest2 ------------------ 
 		/*
 		FieldTest2 f2 = new FieldTest2();
 		
@@ -29,7 +29,8 @@ public class FieldRun {
 //		System.out.println(f2.pri);
 		*/
 		
-		// ------------------ FielfTest3 ------------------ 
+		// ------------------ FieldTest3 ------------------ 
+		
 		System.out.println(FieldTest3.sta);
 		
 		// 수정하고 싶다면 ? 
@@ -41,6 +42,10 @@ public class FieldRun {
 //		FieldTest3.STA_FIN = "ㅎㅎㅎ";
 		
 		System.out.println(Math.PI);
+//		Math.PI = 2.53;	// 상수라 변경불가능
+		
+		System.out.println(Math.random());	// static : 기울임
+		
 	}
 
 }
