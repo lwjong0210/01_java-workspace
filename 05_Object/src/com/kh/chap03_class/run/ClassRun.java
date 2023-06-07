@@ -1,5 +1,6 @@
 package com.kh.chap03_class.run;
 
+import com.kh.chap03_class.model.vo.Person;
 import com.kh.chap03_class.model.vo.Product;
 
 public class ClassRun {
@@ -35,6 +36,13 @@ public class ClassRun {
 		System.out.println("가격 : " + vega.getPrice() + "원");
 		System.out.println("브랜드 : " + vega.getBrand());
 		
+		System.out.println();
+		
+		Person p = new Person();
+		
+		System.out.println(p.getId());
+		System.out.println(p.getAge());
+		System.out.println(p.getGender());
 	}
 
 }
