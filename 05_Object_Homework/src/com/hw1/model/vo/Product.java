@@ -11,10 +11,11 @@ public class Product {
 	private double tax;
 	
 	// 생성자부 (기본 + 전체)
+	// 기본 생성자
 	public Product() {
 		
 	}
-	
+	// 전체 생성자 (매개변수 생성자)
 	public Product(String productId, String productName, String productArea, int price, double tax) {
 		this.productId = productId;
 		this.productName = productName;
