@@ -7,7 +7,6 @@ import com.kh.chap01_oneVSmany.model.Book;
 public class ObjectRun {
 
 	public static void main(String[] args) {
-
 		
 		// 복습
 		// 방법1. 기본생성자로 생성 한 후 setter 메소드를 이용해서 값 초기화
@@ -24,8 +23,8 @@ public class ObjectRun {
 		
 		// [응용] 사용자에게 입력받은 값으로 객체 생성 후 초기화
 		
-		Scanner sc = new Scanner(System.in);
 		/*
+		Scanner sc = new Scanner(System.in);
 		System.out.print("도서명 : ");
 		String title = sc.nextLine();
 		
@@ -46,6 +45,7 @@ public class ObjectRun {
 		*/
 		
 		// 세개의 Book 객체를 관리해야된다면 ?
+		Scanner sc = new Scanner(System.in);
 		Book bk1 = null;
 		Book bk2 = null;
 		Book bk3 = null;
@@ -98,9 +98,6 @@ public class ObjectRun {
 			System.out.println(bk3.information());
 		}
 		
-		
-		
-	
 	}
 
 }

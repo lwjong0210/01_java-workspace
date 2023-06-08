@@ -37,7 +37,7 @@ public class ObjectArrayRun {
 			Books[1] = new Book(저쩌구);
 			Books[2] = new Book(얼씨구);
 			*/
-			
+			// 위 주석 코드를 객체 배열로 생성한다면 ?
 			books[i] = new Book(title, author, price, publisher);
 			
 		}	// for문 끝
@@ -49,7 +49,7 @@ public class ObjectArrayRun {
 		System.out.println(books[2].information());
 		*/
 		
-		// 전체 도서 정보들 조회하기 => 반복문 활용  가능
+		// 전체 도서 정보들 조회하기 => 위 코드 대신 반복문 활용  가능
 		for(int i = 0; i < books.length; i++) {
 			System.out.println(books[i].information());
 			
@@ -71,6 +71,8 @@ public class ObjectArrayRun {
 			System.out.println(books[2].information());
 		}
 		*/
+        // 위 코드를 반복문을 사용해서 출력하면 ?
+
 		for(int i = 0; i < books.length; i++) {
 			if(books[i].getTitle().equals(search)) {
 				System.out.println(books[i].information());

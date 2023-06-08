@@ -1,7 +1,6 @@
 package com.kh.chap06_method.run;
 
 import com.kh.chap06_method.controller.OverloadingTest;
-import com.kh.chap06_method.controller.StaticMethod;
 
 public class MethodRun {
 
@@ -12,15 +11,18 @@ public class MethodRun {
 		
 		NonStaticMethod n = new NonStaticMethod();
 		
+		
 		// 1. 매개변수도 없고 반환값도 없는 메소드 호출
 //		n.method1(10); 매개변수 넣으면 안된다.
 		n.method1();
 			
+		
 		// 2. 매개변수 없고 반환값은 있는 메소드 호출
 		n.method2();
 //		String str = n.method2();	// str에 반환값 "아 집에가고싶다..."를 대입
 		System.out.println(n.method2());
-	
+		
+		
 		// 3. 매개변수 있고 반환값은 없는 메소드 호출
 //		n.method3();	// 매개변수가 없으면 오류남
 //		n.method3(10);	// 매개변수 개수 맞지 않으면 오류남
@@ -28,6 +30,7 @@ public class MethodRun {
 //		int a = n.method3(10, 20);	// 메소드에 return 없음 -> 반환값이 없어서 오류남
 		n.method3(10, 5);
 		n.method3(10, 0);
+		
 		
 		// 4. 매개변수도 있고 반환값도 있는 메소드 호출
 		char ch = n.method4("lemon",1);	// => lemon.chatAt(1);	=> 'e' 반환해서 ch에 대입
@@ -57,10 +60,10 @@ public class MethodRun {
 		*/
 		
 		/*
-		// -------------------NonStaticMethod-----------------------
+		// -------------------StaticMethod-----------------------
 		// 생성 없이 바로 호출 가능
 		// Math.random();
-		StaticMethod.method1();
+		StaticMethod.method1();	// 얘도 생성없이 바로 호출 가능한 Static 메소드	
 		StaticMethod.method2();
 		System.out.println(StaticMethod.method2());	// return 값은 출력하지 않으면 보이지 않는다.
 		StaticMethod.method3("차은우");
@@ -68,6 +71,7 @@ public class MethodRun {
 		*/
 		
 		// -------------------OverloadingTest-----------------------
+		
 		OverloadingTest ot = new OverloadingTest();
 		ot.test();
 		ot.test(10);
@@ -78,6 +82,8 @@ public class MethodRun {
 		
 		// 오버로딩의 대표적인 예 => print()
 		System.out.print(0);
+        System.out.print("안녕");
+
 	}
 
 
