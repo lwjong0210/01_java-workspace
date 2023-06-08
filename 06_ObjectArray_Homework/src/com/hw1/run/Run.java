@@ -49,6 +49,7 @@ public class Run {
 		// 보너스가 적용된 연봉 = (급여 +(급여 *보너스 포인트)) * 12
 		int total = 0;
 		int totalSalary = 0;
+		
 		for(int i = 0; i < ep.length; i++) {
 			totalSalary = (int)(ep[i].getSalary() + ep[i].getSalary()*ep[i].getBonusPoint())*12;
 			System.out.println(ep[i].getEmpName() + "의 연봉 : " + totalSalary + "원");
