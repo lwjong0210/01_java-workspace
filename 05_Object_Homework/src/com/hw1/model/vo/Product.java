@@ -3,6 +3,14 @@ package com.hw1.model.vo;
 
 public class Product {
 	
+	//필드부
+	private String productId;	// 상품아이디
+	private String productName;	// 상품명
+	private String productArea;
+	private int price;
+	private double tax;
+	
+	// 생성자부 (기본 + 전체)
 	public Product() {
 		
 	}
@@ -15,19 +23,11 @@ public class Product {
 		this.tax = tax;
 	}
 	
-	
-	private String productId;
-	private String productName;
-	private String productArea;
-	private int price;
-	private double tax;
+	// 메소드부
+	// get - set => 한세트로 작성
 	
 	public void setProductId(String productId) {
 		this.productId = productId;
-	}
-	
-	public String information() {
-		return productId + " " + productName + " " + productArea + " " + price + " " + tax;
 	}
 	
 	public String getProductId() {
@@ -66,4 +66,7 @@ public class Product {
 		return tax;
 	}
 
+	public String information() {
+		return productId + " " + productName + " " + productArea + " " + price + " " + tax;
+	}
 }
