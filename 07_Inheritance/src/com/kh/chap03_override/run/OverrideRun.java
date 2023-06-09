@@ -11,6 +11,11 @@ public class OverrideRun {
 		System.out.println(bk1);
 		System.out.println(bk2);
 		
+		// 출력문에 래퍼런스를 출력하고자 할 때 JVM이 자동으로 해당 레퍼런스.toString() 메소드 호출
+		
+		// 오버라이딩전 : Object 쿨래스의 toString() 실행 => 풀클래스명 + @ + 객체의 해쉬코드의 16진수값 리턴
+		// 오버라이딩후 : Book 클래스의 toString() 실행 => 해당 객체가 가지고 있는 모든 필드값을 한 문자열로 합쳐 리턴
+		
 	}
 
 }
