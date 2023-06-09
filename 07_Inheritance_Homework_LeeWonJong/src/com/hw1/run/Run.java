@@ -29,7 +29,7 @@ public class Run {
 		// 사원들의 정보를 키보드로 계속 입력 받고 → while(true) 무한 반복문을 통해
 		// 입력받은 정보들을 가지고 매개변수 생성자를 이용하여 객체 배열에 객체 생성
 		Scanner sc = new Scanner(System.in);
-		int count = 0;
+		int count = 1;
 		
 		while(true) {
 			
@@ -52,9 +52,10 @@ public class Run {
 			System.out.print("부서 : ");
 			String dept = sc.nextLine();
 			
-			e[count] = new Employee(name, age, height, weight, salary, dept);
+			e[count-1] = new Employee(name, age, height, weight, salary, dept);
 
 			if(count == e.length) {
+				System.out.println("최대 입력가능한 횟수는 10회 입니다.");
 				break;
 			}
 			System.out.print("계속 추가하시겠습니까?(y/n) : ");
@@ -72,8 +73,11 @@ public class Run {
 			
 		}
 		// 배열에 담긴 사원들의 정보를 모두 출력
-		for(int i = 0; i < count+1; i++) {
+		System.out.println(count + "명의 정보를 출력합니다.");
+		for(int i = 0; i < count; i++) {
 			System.out.println(e[i]);
 		}
+		System.out.println("프로그램을 종료합니다.");
+		sc.close();
 	}
 }
