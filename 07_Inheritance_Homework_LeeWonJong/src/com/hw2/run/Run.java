@@ -22,7 +22,7 @@ public class Run {
 			c[i].draw();
 			System.out.println();
 		}
-		for(int i = 0; i < c.length; i++) {
+		for(int i = 0; i < r.length; i++) {
 			r[i].draw();
 			System.out.println();
 		}

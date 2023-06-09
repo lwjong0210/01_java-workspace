@@ -24,6 +24,6 @@ public class Circle extends Point {
 	@Override
 	public void draw() {
 		super.draw();
-		System.out.print(", 면적 : " + Math.PI * getRadius() * getRadius() + ", 둘레 : " + Math.PI * getRadius() * 2);
+		System.out.printf(", radius : %d, 면적 : %.1f, 둘레 : %.1f",radius, Math.PI * getRadius() * getRadius() , Math.PI * getRadius() * 2);
 	}
 }
