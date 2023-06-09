@@ -24,5 +24,15 @@ public class Car extends Vehicle {
 	public String information() {
 		return super.information() + ", tire : " + tire;
 	}
+	
+	@Override	// 어노테이션(생략가능) 대신 부모에 무조건 이 메소드 이름이 있어야 함
+	public void howToMove() {	// 이름 이상하게 하면 오류남
+		System.out.println("바퀴를 굴려 움직인다.");
+	}
+	
+	@Override
+	public String toString() {
+		return "아무말";
+	}
 
 }

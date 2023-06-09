@@ -44,5 +44,8 @@ public class Vehicle {
 		return "name : " + name + ", milage : " + mileage + ", kind : " + kind ; 
 	}
 	
+	public void howToMove() {
+		System.out.println("움직이다.");
+	}
 	
 }

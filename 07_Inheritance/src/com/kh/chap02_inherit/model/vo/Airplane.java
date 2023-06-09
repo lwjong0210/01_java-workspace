@@ -34,5 +34,10 @@ public class Airplane extends Vehicle{
 	public String information() {
 		return super.information() + ", tire : " + tire + ", wing : " + wing;
 	}
+	
+	@Override
+	public void howToMove() {
+		System.out.println("바퀴를 굴리다가 날개를 휘저으며 움직인다.");
+	}
 
 }
