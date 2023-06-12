@@ -19,7 +19,7 @@ public class Run {
 		
 		// 위의 학생 정보 모두 출력
 		for(int i = 0; i < s.length; i++) {
-			System.out.println(s[i]);
+			System.out.println(s[i]/*.toString*/);
 		}
 
 		System.out.println("==========================================================================================");
@@ -29,7 +29,7 @@ public class Run {
 		// 사원들의 정보를 키보드로 계속 입력 받고 → while(true) 무한 반복문을 통해
 		// 입력받은 정보들을 가지고 매개변수 생성자를 이용하여 객체 배열에 객체 생성
 		Scanner sc = new Scanner(System.in);
-		int count = 1;
+		int count = 0;
 		
 		while(true) {
 			
@@ -52,7 +52,7 @@ public class Run {
 			System.out.print("부서 : ");
 			String dept = sc.nextLine();
 			
-			e[count-1] = new Employee(name, age, height, weight, salary, dept);
+			e[count] = new Employee(name, age, height, weight, salary, dept);
 
 			if(count == e.length) {
 				System.out.println("최대 입력가능한 횟수는 10회 입니다.");
@@ -61,13 +61,11 @@ public class Run {
 			System.out.print("계속 추가하시겠습니까?(y/n) : ");
 			char yesOrNo = sc.nextLine().charAt(0);
 			
+			count ++;
 			// 계속 추가할 것인지 물어보고, 대소문자 상관없이 y이면 계속 객체 추가
 			// ‘n’일 경우 더 이상 그만 입력 받도록 …
-			if(yesOrNo == 'y') {
+			if(yesOrNo == 'n'	|| yesOrNo == 'N') {
 				// 한명씩 추가 될때마다 카운트함
-				count ++;
-				continue;
-			}else {
 				break;
 			}
 			
