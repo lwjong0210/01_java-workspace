@@ -65,6 +65,7 @@ public class ArrayForEach {
 				System.out.println("가격 : " + p.getPrice() + "원");
 			}
 		}
+		sc.close();
 		
 	}
 

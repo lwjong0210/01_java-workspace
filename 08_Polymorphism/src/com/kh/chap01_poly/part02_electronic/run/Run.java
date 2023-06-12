@@ -69,6 +69,7 @@ public class Run {
 		Electronic d = es.select(0);
 		Electronic n = es.select(1);
 		Electronic t = es.select(2);
+		
 		// 이런걸 다운캐스팅 이라고 한다!!!
 		
 		// 위아래 방법 둘다 가능
