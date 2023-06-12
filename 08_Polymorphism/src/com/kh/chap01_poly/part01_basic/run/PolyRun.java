@@ -24,7 +24,7 @@ public class PolyRun {
 		// Parent 접근시 자동으로 형변환된 채로 진행된거임
 		
 		System.out.println("3. 부모타입 레퍼런스로 자식객체를 다루는 경우(다형성)");
-		Parent p2 = /*(Parent)*/new Child1();	// 자료형이 다른다 ? => 에러안뜸! => 자동형변환 된거임
+		Parent p2 = /*(Parent)*/new Child1();	// 자료형이 다르다 ? => 에러안뜸! => 자동형변환 된거임
 		p2.printParent();
 //		p2.printChild();	=> 안됨
 		((Child1)p2).printChild1(); // 강제 형변환을 하면 호춣은 가능!!
