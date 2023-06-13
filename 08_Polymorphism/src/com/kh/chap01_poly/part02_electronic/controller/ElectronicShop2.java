@@ -27,7 +27,7 @@ public class ElectronicShop2 {
 	}	
 	// 맨처음 => count : 0 이었을 경우
 	// any = new Desktop(~~~)
-	// elect[0] = new Desktop(~~~); 이거 실행하고 count 1
+	// elec[0] = new Desktop(~~~); 이거 실행하고 count 1
 	
 	// 그다음 => count : 1 이었을 경우 
 	// any = new NoteBook(~~~)
