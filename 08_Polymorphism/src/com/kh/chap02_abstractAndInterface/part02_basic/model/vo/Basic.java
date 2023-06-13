@@ -8,7 +8,7 @@ public interface Basic {
 //	private int a;
 	
 	/*
-	public void test() {
+	public void test() {	=> 얘 못쓴다.
 		
 	}
 	*/
@@ -18,5 +18,5 @@ public interface Basic {
 	
 	// 인터페이스에서의 메소드는 무조건 추상 메소드임!!
 	/*public abstract*/ void eat();
-	/*public abstract*/ void sleep();
+	/*public abstract*/ void sleep();	// public abstract 생략가능
 }

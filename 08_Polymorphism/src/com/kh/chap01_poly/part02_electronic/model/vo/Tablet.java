@@ -22,7 +22,6 @@ public class Tablet extends Electronic {
 	}
 	
 	@Override
-	
 	public String toString() {
 		return super.toString() + ", penFlag : " + penFlag;
 	}

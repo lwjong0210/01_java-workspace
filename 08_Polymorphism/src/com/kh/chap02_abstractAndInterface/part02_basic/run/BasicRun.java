@@ -23,12 +23,13 @@ public class BasicRun {
 		mom.sleep();	// 건강도 + 20, 
 		baby.sleep();	// 건강도 + 3
 		
-		System.out.println("==========다음낳============");
+		System.out.println("==========다음날============");
 		System.out.println(mom);
 		System.out.println(baby);
 		*/
 		
-//		Basic b = new Basic(); // 래퍼런스 변수로는 사용 가능하나 객체 생성은 불가능함
+//Basic b = new Basic(); // 래퍼런스 변수로는 사용 가능하나 객체 생성은 불가능함
+
 		Basic mom = new Mother("김엄마", 50, 70, "출산");
 		Basic baby = new Baby("김아기", 3.5, 70);
 		
@@ -41,6 +42,7 @@ public class BasicRun {
 		mom.sleep();
 		baby.sleep();
 		
+		System.out.println("==========다음날============");
 		System.out.println(mom);
 		System.out.println(baby);
 		/*

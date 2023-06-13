@@ -12,9 +12,9 @@ public class Run {
 
 		// 실행용 클래스는 납품업체라 생각!
 		
-		/*
-		// 1. 다형성 적용 안했을 경우(ElectronicShop1)
 		
+		// 1. 다형성 적용 안했을 경우(ElectronicShop1)
+		/*
 		ElectronicShop1 es = new ElectronicShop1();
 		// es에서 마련해놓은 desk, note, tab이라는 필드에
 		// 객체를 생성해서 넣어주기 위해서 우선 es 생성!!
@@ -86,6 +86,7 @@ public class Run {
 		 * 2. 메소드 정의시 매개변수로 다형성을 적용하게 되면 메소드 개수가 확 줄어든다!!
 		 * 3. 필수로 써야하는 곳이 있음	 => 추상클래스(인터페이스)
 		 */
+	
 	}
 	
 }
