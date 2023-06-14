@@ -18,6 +18,7 @@ public class ElectronicShop2 {
 	// 부모타입 배열로 모든 자식 객체 다루기
 	private Electronic[] elec = new Electronic[3];
 	private int count = 0;
+
 	
 	// inset 함수 구현
 	// 매개변수 => Desktop, NoteBook, Tablet 전부 다 받을 수 있는 부모 Electronic 으로 생성
