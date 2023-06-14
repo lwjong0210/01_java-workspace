@@ -41,7 +41,7 @@ public class C_StringTokenizerTest {
 		System.out.println(stn.nextToken());
 		System.out.println(stn.nextToken());
 		
-		System.out.println(stn.countTokens()); // 다 뽑으면 끝남.. 일회성
+		System.out.println(stn.countTokens()); // 다 뽑으면 끝남.. 일회성 --> 토큰갯수가 0으로 나옴
 
 		System.out.println(stn.nextToken());	// NoSuchElementException : 더 이상 요소가 없다...
 		*/

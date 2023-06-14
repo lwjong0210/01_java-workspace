@@ -5,8 +5,8 @@ public class A_StringPoolTest {
 	public void method1() {
 		
 		/*
-	String s = "안뇽";	// 참조자료형
-	int a = 10;	// 기본자료형
+		String s = "안뇽";	// 참조자료형
+		int a = 10;	// 기본자료형
 		 */
 		
 		// 1. 생성자를 통한 문자열 생성
@@ -35,7 +35,6 @@ public class A_StringPoolTest {
 		
 	}
 	public void method2() {
-		
 
 		String str = new String("hello");	// 매개변수 생성자
 		// 2. 문자열을 리터럴값으로 생성

@@ -1,7 +1,5 @@
 package com.kh.chap02_string.controller;
 
-import java.awt.Container;
-
 public class B_StringMethodTest {
 
 	public void method() {
@@ -72,7 +70,7 @@ public class B_StringMethodTest {
 		System.out.println("str5 : " + str5);
 		System.out.println("Lower : " + str5.toLowerCase());
 		
-		/*
+		/*  // 이런곳에 적용가능
 		System.out.println("계속 입력하시겠습니까 ? (y/n) : ");
 		char ch = sc.nextLine().toUpperCase().charAt(0); // 'N', 'Y'
 		

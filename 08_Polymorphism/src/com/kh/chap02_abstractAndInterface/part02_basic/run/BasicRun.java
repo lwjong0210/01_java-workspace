@@ -45,6 +45,7 @@ public class BasicRun {
 		System.out.println("==========다음날============");
 		System.out.println(mom);
 		System.out.println(baby);
+		
 		/*
 		 * 클래스에서 클래스를 상속받을 때 : 클래스 extend class : (단일 상속만 가능) : 화살표 실선
 		 * 클래스에서 인터페이스를 구현할때 : 클래스 implements 인터페이스1, 인터페이스2, ... (다중구현가능) : 화살표 점선

@@ -6,8 +6,8 @@ import com.kh.practice.token.controller.TokenController;
 
 public class TokenMenu {
 	
-	Scanner sc = new Scanner(System.in);
-	TokenController tc = new TokenController();
+	private Scanner sc = new Scanner(System.in);
+	private TokenController tc = new TokenController();
 	
 	public void mainMenu() {
 		while(true) {
@@ -45,18 +45,14 @@ public class TokenMenu {
 		String str = "J a v a P r o g r a m ";
 		// 토큰 처리 전 글자, 토큰 처리 전 개수를 출력
 		System.out.println("토큰 처리 전 글자 : " + str);
-		System.out.print("토큰 처리 전 개수 : ");
-		System.out.println(str.length());
+		System.out.println("토큰 처리 전 개수 : " + str.length());
 		// TokenController(tc)의 afterToken()의 반환 값을 가지고
 		// 토큰 처리 후 글자, 토큰 처리 후 개수, 모두 대문자로 변환 한 것을 출력
 		String newStr = tc.afterToken(str);
-		System.out.print("토큰 처리 후 글자 : ");
-		System.out.println(newStr);
+		System.out.println("토큰 처리 후 글자 : " + newStr);
 
-		System.out.print("토큰 처리 후 개수 : ");
-		System.out.println(newStr.length());
-		System.out.print("모두 대문자로 변환 : ");
-		System.out.println(newStr.toUpperCase());
+		System.out.println("토큰 처리 후 개수 : " + newStr.length());
+		System.out.println("모두 대문자로 변환 : " + newStr.toUpperCase());
 		}
 		
 		public void inputMenu(){
@@ -64,13 +60,13 @@ public class TokenMenu {
 			System.out.print("문자열을 입력하세요 : ");
 			String str = sc.nextLine();
 			// tc에 firstCap()로 입력 받은 문자열을 넘기고 반환 값 출력
-			System.out.println(tc.firstCap(str));
+			System.out.println("첫 글자 대문자 : " + tc.firstCap(str));
 			//찾을 문자를 하나 입력하세요 : 
 			System.out.print("찾을 문자를 하나 입력하세요 : ");
 			char ch = sc.nextLine().charAt(0);
 			// tc에 findChar()로 위에 입력 받은 문자열과 방금 받은 문자를 인자로 넘겨
 			// 반환 값 출력
-			System.out.println(tc.findChar(str, ch));
+			System.out.println(ch + " 문자가 들어간 개수 : " + tc.findChar(str, ch));
 			
 		}
 
