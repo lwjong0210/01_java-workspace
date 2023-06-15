@@ -70,8 +70,12 @@ public class Book {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
 		// publishDate (Date타입) --- 포맷적용한 ---> str (String)
 		String str = sdf.format(publishDate);
-		return "책제목 : " + title + ", 작가 : " + author + ", 출판사 : " + publisher + ", 출판일 : " + str + ", 금액 : " + price ;
+		
+		return "Book [title=" + title + ", author=" + author + ", publisher=" + publisher + ", publishDate="
+				+ str + ", price=" + price + "]";
 	}
+
+
 	
 	
 
