@@ -91,13 +91,22 @@ public class BookController {
 		// 도서 리스트를 전체적으로 조회하면서 (for문 이용)
 		// 전달받은 검색명을 포함(HINT : String클래스의 contains메소드 활용)한!! 도서들 전체 출력 
 		// 1) for loop문 방법
+		/*
 		for(int i = 0 ; i < books.length; i++) {
 			if(String.valueOf(books[i]).contains(searchTitle)) {
 				System.out.println(books[i]);
 			}
 			
 		}
+		*/
 		// 2) for each문 방법 (향상된 for문)
+		for(Book b : books) {
+			if(String.valueOf(b).contains(searchTitle)){
+				System.out.println(b);
+				
+			}
+				
+		}
 
 	}
 }
