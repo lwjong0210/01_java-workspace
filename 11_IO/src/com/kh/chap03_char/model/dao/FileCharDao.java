@@ -38,7 +38,7 @@ public class FileCharDao {
 			fw.write('\n');
 			fw.write('ㅎ');
 			
-			char[] arr = {'a', 'p', 'p', 'l', 'e'};	// 2바이트씩 전달이기 때문에 ap, pl, e 로 전달
+			char[] arr = {'a', 'p', 'p', 'l', 'e'};	// 통로만 2byte 이고 실제롤 하나씩 전달
 			fw.write(arr);
 			
 		} catch (IOException e) {
@@ -68,7 +68,7 @@ public class FileCharDao {
 			
 			int value = 0;
 			while((value = fr.read()) != -1) {
-				System.out.print((char)value);
+				System.out.println((char)value);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
