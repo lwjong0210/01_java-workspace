@@ -70,19 +70,21 @@ public class BookController {
 		
 		// 3. 나머지 전달받은 값들과 위에서 변환작업을 해준 price와 date값을 가지고
 		// Book클래스의 매개변수 생성자를 통해 생성
+		
+//		Book b = new Book(newTitle, newAuthor, newPublisher, d2, price);
+		
 		books = Arrays.copyOf(books,books.length+1);
 		books[books.length-1] = new Book(newTitle, newAuthor, newPublisher, d2, price);
 		
-	}
+ 	}
 	
 	// 3. 도서 출간일 출력 기능 메소드
 	public void printBookPublishDate() {
 		// 새로 입력받은 도서 (5번째 도서)의 출간일 출력
 		// "xxxx년 xx월 xx일 출간" 과 같은 패턴으로 출력
 		// SimpleDateFormat을 이용하여 출력
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 mm월 dd일 출간");
-		String formatdate = sdf.format(books[books.length -1].getPublishDate());
-		System.out.println(formatdate);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 출간");
+		System.out.println(sdf.format(books[books.length -1].getPublishDate()));
 		
 	}
 	
