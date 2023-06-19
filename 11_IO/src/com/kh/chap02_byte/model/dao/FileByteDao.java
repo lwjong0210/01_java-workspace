@@ -13,8 +13,8 @@ public class FileByteDao {
 		 * 바이트 스트림 : 데이털르 1바이트 단위로 전송하는 통로(좁은 통로임..1바이트면 한글 깨짐)
 		 * - 기반 스트림 : 외부매체와 직접적으로 연결되는 통로
 		 * 
-		 * XXXInputStream : xxx 매체로부터 데이터를 입력 받는 통로 (외부매체로부터 데이터 읽어오겠음!)
-		 * XXXOutputStream : XXX 매체로 데이터을 출력하는 통로 (외부매체로부터 데이털르 내보내겠다. 쓰겠다.)
+		 * XXXInputStream : XXX 매체로부터 데이터를 입력 받는 통로 (외부매체로부터 데이터 읽어오겠음!)
+		 * XXXOutputStream : XXX 매체로 데이터를 출력하는 통로 (외부매체로부터 데이터를 내보내겠다. 쓰겠다.)
 		 * 
 		 */
 	
@@ -108,7 +108,7 @@ public class FileByteDao {
 			
 			// read() 호출 반복문 수행시에만 실행되도록
 			// 해결방법1. 무한반복을 돌리면서 매번 조건검사
-			
+			/*
 			while(true) {
 				int value = fin.read();
 				if(value == -1) {
@@ -116,7 +116,7 @@ public class FileByteDao {
 				}
 				System.out.println(value);
 			}
-			
+			*/
 			// 해결방법2. 권장방법
 			int value = 0;
 			while((value = fin.read()) != -1){

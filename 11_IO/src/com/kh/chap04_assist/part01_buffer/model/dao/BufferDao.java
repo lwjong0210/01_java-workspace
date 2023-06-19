@@ -79,10 +79,6 @@ public class BufferDao {
 			e.printStackTrace();
 		}	// 자원반납 구문 안써도 됨! 자동으로 반납까지 해줄꺼임!
 		
-		
-		
-		
-		
 	}
 	
 	// 프로그램 <------- 파일 (입력)

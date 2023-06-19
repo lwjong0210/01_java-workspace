@@ -7,7 +7,7 @@ public class ObjectRun {
 	public static void main(String[] args) {
 
 		ObjectDao dao = new ObjectDao();
-		dao.fileSave();
+//		dao.fileSave();
 		dao.fileRead();
 	}
 

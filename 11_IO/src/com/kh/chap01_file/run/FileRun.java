@@ -15,7 +15,7 @@ public class FileRun {
 		// java.io.File 클래스 가지고
 		// 여기서는 예외처리가 필수
 		
-//		File f1 = new File();	=> 기본생성자가 없어서 오류
+//		File f1 = new File();	=> 기본생성자가 없어서 오류 => 무조건 매개변수 필요함
 		
 		try {
 		// 1. 경로 지정을 딱히 하지 않은 상태로 파일 생성 => 현재 Project 폴더에 파일 생성
