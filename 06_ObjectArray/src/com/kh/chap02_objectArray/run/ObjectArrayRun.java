@@ -41,8 +41,8 @@ public class ObjectArrayRun {
 			total += phones[i].getPrice();
 		}
 		
-		System.out.println("총가격 : " + total);
-		System.out.println("평균가격 : " + total / phones.length);
+		System.out.println("총가격 : " + total + "원");
+		System.out.println("평균가격 : " + total / phones.length + "원");
 		
 		// 사용자에게 구매하고자 하는 핸드폰명을 입력받아
 		// 해당 휴대폰을 찾은 후에 그 가격을 알려주도록
