@@ -1,4 +1,4 @@
-package com.kh.chap02_set.par01_hashset.model.vo;
+package com.kh.chap02_set.part01_hashSet.model.vo;
 
 import java.util.Objects;
 

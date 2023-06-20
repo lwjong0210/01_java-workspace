@@ -72,11 +72,11 @@ public class ListRun {
 		
 		System.out.println(list);
 		
-		// 5. size() : 해당 리스트의 사이즈를 반환시켜주는 메소드 (즉, 몇개의 데이터 담겨있는지)
+		// 5. size() : 해당 리스트의 사이즈를 반환시켜주는 메소드 (즉, 몇개의 데이터 담겨있는지) 사이즈를 4로 설정해도 데이터가 안담겨있으면 0
 		System.out.println("리스트의 사이즈 : " + list.size());	// 배열과 비교해보자면 length 같은 느낌
 		
 		// 6. get(int index) : 해당 인덱스 위치의 객체를 반환시켜주는 메소드
-		Music m = (Music)list.get(0);	// .get 의 반환형은 object 따라서 Music으로 강제 형변환 해야됨 
+		Music m = (Music)list.get(0);	// .get 의 반환형은 object 따라서 Music으로 강제 형변환 해야됨(제네릭 설정을 안했기 때문)
 		String s = (String)list.get(3);
 		
 		System.out.println(m);
