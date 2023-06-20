@@ -47,7 +47,7 @@ public class Student {
 	public String toString() {
 		return "Stuent [name=" + name + ", age=" + age + ", score=" + score + "]";
 	}
-
+/*
 	@Override
 	public int hashCode() {
 		return Objects.hash(age, name, score);
@@ -64,8 +64,8 @@ public class Student {
 		Student other = (Student) obj;
 		return age == other.age && Objects.equals(name, other.name) && score == other.score;
 	}
-	
-	/*
+	*/
+	/*	내 마음대로 만든 hashCode(),
 	@Override
 	public int hashCode() {	// 모든 필드에 담긴 값이 일치하면 동일한 hashCode 반환 하도록
 		String str = name + age + score;	// 하나의 문자열 "공유43100", "차은우2685", "주지훈2420"

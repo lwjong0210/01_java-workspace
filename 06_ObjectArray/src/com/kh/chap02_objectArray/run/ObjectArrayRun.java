@@ -30,7 +30,7 @@ public class ObjectArrayRun {
 		phones[1] = new Phone("아이폰", "애플", 1300000,"14pro");
 		phones[2] = new Phone("갤럭시", "삼성", 1200000, "s23");
 		
-		phones[0].SetName("벨벳폰");
+		phones[0].setName("벨벳폰");
 		phones[0].setBrand("엘지");
 		phones[0].setPrice(1000000);
 		phones[0].setSeries("1");

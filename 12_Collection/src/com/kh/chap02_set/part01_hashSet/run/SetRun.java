@@ -45,13 +45,15 @@ public class SetRun {
 		
 		// Student equals() 오버라이딩		=> "실제 각 필드에 담긴 데이터" 들이 다 일치하면 true / false
 		// Student hashCode() 오버라이딩 	=> "실제 각 필드에 담긴 데이터" 들이 일치하면 동일한 10진수 반환
-		/*
+		
+		System.out.println("=======================================================");
 		System.out.println(new Student("공유",43,100).hashCode());
 		System.out.println(new Student("공유",43,100).hashCode());
 		// 재정의한 hashCode() 메소드에 의해 둘다 결과 똑같음
 		
 		System.out.println(new Student("공유",43,100).equals(new Student("공유",43,100)));	// 오버라이딩 안했으면 원래 false가 나옴
-		*/
+		System.out.println("=======================================================");
+		
 		
 		// hs2.get(1);	=> 인덱스의 개념도 없고 get메소드 자체가 정의되어 있지 않음!! (한 객체만 뽑아올 수 없음!!)
 		

@@ -34,7 +34,6 @@ public class ListRun {
 	 * 
 	 * 		* 방대한 데이터들을 단지 보관만 해두고 조회만 할 경우 배열을 많이 사용
 	 * 		  방대한 데이터를 보관, 추가, 삭제 등등 이런 과정들이 빈번할 경우 컬렉션을 많이 사용
-	 * 	// 그림있음
 	 */
 	
 	public static void main(String[] args) {
@@ -45,6 +44,7 @@ public class ListRun {
 		// E -> Element : 리스트에 담길 데이터들 (요소)
 		
 		// 1. add(E e) : 리스트 공간 끝에 전달될 데이터를 추가시켜주는 메소드
+		System.out.println("\n1. add(E e)");
 		list.add(new Music("Attention", "뉴진스"));
 		list.add(new Music("새삥", "지코"));
 		list.add(new Music("죽일놈", "다이나믹 듀오"));
@@ -55,7 +55,8 @@ public class ListRun {
 		
 		System.out.println(list);	// list 특징 : 순저유지 하면서 담김 (0번 인덱스부터 차곡차곡)
 		
-		// 2. add(index, E e) : 직접 인덱슬르 지정해서 해당 인덱스 위치에 데이터를 추가시켜주는 메소드
+		// 2. add(index, E e) : 직접 인덱스를 지정해서 해당 인덱스 위치에 데이터를 추가시켜주는 메소드
+		System.out.println("\n2. add(index, E e)");
 		list.add(1, new Music("진심이 담긴 노래", "케이시"));
 		
 		// 중간 위치에 데이터 추가시 복잡한 알고리즘 직접 구현 안함		=> 장점 2
@@ -63,19 +64,23 @@ public class ListRun {
 		System.out.println(list);
 		
 		// 3. remove(int index) : 해당 인덱스위치의 데이터 삭제시켜주는 메소드
+		System.out.println("\n3. remove(int index)");
 		list.remove(1);
 		
 		System.out.println(list);
 		
 		// 4. set(int index, E e) : 해당 인덱스 위치에 데이터를 새로이 전달된 e로 수정시켜주는 메소드
+		System.out.println("\n4. set(int index, E e)");
 		list.set(1, new Music("헌삥", "지야코"));
 		
 		System.out.println(list);
 		
 		// 5. size() : 해당 리스트의 사이즈를 반환시켜주는 메소드 (즉, 몇개의 데이터 담겨있는지) 사이즈를 4로 설정해도 데이터가 안담겨있으면 0
+		System.out.println("\n5. size()");
 		System.out.println("리스트의 사이즈 : " + list.size());	// 배열과 비교해보자면 length 같은 느낌
 		
 		// 6. get(int index) : 해당 인덱스 위치의 객체를 반환시켜주는 메소드
+		System.out.println("\n6. get(int index)");
 		Music m = (Music)list.get(0);	// .get 의 반환형은 object 따라서 Music으로 강제 형변환 해야됨(제네릭 설정을 안했기 때문)
 		String s = (String)list.get(3);
 		
@@ -86,17 +91,21 @@ public class ListRun {
 		System.out.println(((Music)list.get(1)).getTitle());	// 따라서 Music 의 getTitle() 메소드 사용하기 위해 강제 형변환 필요
 		
 		// 7. subList(int index1, int index2) : List => 추출해서 새로운 List 반환 : subString 같은거
+		System.out.println("\n7. subList(int index1, int index2)");
 		List sub = list.subList(0, 2);	// 0 <=		< 2
 		System.out.println(sub);
 		
 		// 8. addAll(Collect c) : 컬렉션을 통째로 뒤에 추가시켜주는 메소드
+		System.out.println("\n8. addAll(Collect c)");
 		list.addAll(sub);
 		System.out.println(list);
 		
 		// 9. isEmpty() : boolean => 컬렉션이 비어있는지 묻는 메소드
+		System.out.println("\n9. isEmpty()");
 		System.out.println(list.isEmpty());
 		
 		// 10. clear() : 리스트 안에 있는 내용을 싹 비워주는 메소드
+		System.out.println("\n10. clear()");
 //		list.clear();
 //		System.out.println(list);
 //		System.out.println(list.isEmpty());	// true
