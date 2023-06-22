@@ -88,8 +88,6 @@ public class ServerProgram {
 				e.printStackTrace();
 			}
 		}
-		
-		
 	}
 
 }
