@@ -26,12 +26,21 @@ public class BookController implements BookManager {
 	public Book searchBookBybNo(String bNo) {
 		
 		Book b = null; 
-		for(int i = 0; i < list.size(); i++) {
-			if(list.get(i).getbNo().equals(bNo)) {
-				b = list.get(i);
+		
+		for(Book sb : list) {
+			if(sb.getbNo().equals(bNo)) {
+				b = sb;
 			}
 		}
+		
 		return b;
+		
+//		for(int i = 0; i < list.size(); i++) {
+//			if(list.get(i).getbNo().equals(bNo)) {
+//				b = list.get(i);
+//			}
+//		}
+//		return b;
 	}
 
 	@Override
@@ -39,11 +48,18 @@ public class BookController implements BookManager {
 		
 		ArrayList<Book> TitleList = new ArrayList<>();
 		
-		for(int i = 0; i < list.size(); i++) {
-			if(list.get(i).getTitle().contains(title)) {
-				TitleList.add(list.get(i));
+		for(Book b : list) {
+			if(b.getTitle().contains(title)) {
+				TitleList.add(b);
 			}
 		}
+		
+//		
+//		for(int i = 0; i < list.size(); i++) {
+//			if(list.get(i).getTitle().contains(title)) {
+//				TitleList.add(list.get(i));
+//			}
+//		}
 		return TitleList;
 	}
 
@@ -76,6 +92,14 @@ public class BookController implements BookManager {
 	public ArrayList<Book> magazineOfThisYearInfo(int year) {
 		
 		ArrayList<Book> yearList = new ArrayList<>();
+		/*
+		for(int i = 0; i < onlySearchMagazine().size(); i++) {
+			if(	((Magazine)(onlySearchMagazine().get(i))).getYear() == year) {
+				yearList.add(onlySearchMagazine().get(i));
+			}
+		}
+		*/
+		
 		
 		for(Book b : onlySearchMagazine()) {
 			if(((Magazine)(b)).getYear() == year) {
