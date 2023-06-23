@@ -34,6 +34,13 @@ public class LibraryRun {
 		printBooks(bList);
 
 	}
+	
+	// static을 안쓰기 위해서는
+	/*
+	 * 	LibraryRun lr = new LibraryRun();
+		lr.printBooks(bList);
+		를 위에 메인에 추가 해야됨
+	 */
 
 	public static void printBooks(ArrayList<Book> bs) {
 		// 여기서 메뉴열고 구현 시작
@@ -148,8 +155,26 @@ public class LibraryRun {
 					int month = sc.nextInt();
 					tmpBook = new Magazine(bNo, title, author, publisher, price, description, year, month);
 
-					
 				}
+				
+				/*
+				for(int i = 0 ; i < bc.list.size(); i++) {
+					
+					if(bc.list.get(i).getbNo() == bNo ) {
+						System.out.println("해당 도서는 이미 소장하고 있는 책입니다.");
+						break;
+						
+					}else {
+						bc.addBook(tmpBook);
+						System.out.println("성공적으로 일반도서가 추가되었습니다!");
+						break;
+					}
+				}
+				*/
+				
+				
+				
+	
 				boolean duplication = false;
 
 				for(Book b : bc.list) {
@@ -174,6 +199,7 @@ public class LibraryRun {
 				}else {
 					System.out.println("해당 도서는 이미 소장하고 있는 책입니다.");
 				}
+
 	
 				break;
 				
