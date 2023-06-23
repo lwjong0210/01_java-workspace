@@ -143,7 +143,7 @@ public class LibraryRun {
 				System.out.println("===============================================");
 				
 				Book tmpBook = null;
-				
+				// searchBookBybNo 사용해서 만들수있음
 				if (bkOrMaga.equals(true)) {
 					tmpBook = new Book(bNo, title, author, publisher, price, description);
 
@@ -221,12 +221,12 @@ public class LibraryRun {
 					System.out.print("bNo을 입력하세요 : ");
 					bNo = sc.nextLine();
 					
-					Book b = bc.searchBookBybNo(bNo);
+					Book book = bc.searchBookBybNo(bNo);
 					
-					if(b == null) {
+					if(book == null) {
 						System.out.println("존재하지 않는 책입니다.");
 					}else {
-						System.out.println(b); 
+						System.out.println(book); 
 					}
 					
 				

@@ -81,7 +81,7 @@ public class A_Variable {
 			
 			int iNum = 10000;	// 4byte
 			
-			long lNum = 1000000;	// 8byte
+			long lNum = 1000000L;	// 8byte
 					
 			// 2_2 실수형 (소숫점 o)
 			float fNum = 0.0f;	// 4byte => 소숫점 7자리까지 표현 가능
