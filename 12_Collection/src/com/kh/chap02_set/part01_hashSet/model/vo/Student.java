@@ -65,12 +65,14 @@ public class Student {
 		return age == other.age && Objects.equals(name, other.name) && score == other.score;
 	}
 	*/
-	/*	내 마음대로 만든 hashCode(),
+//		내 마음대로 만든 hashCode(),
+	/*
 	@Override
 	public int hashCode() {	// 모든 필드에 담긴 값이 일치하면 동일한 hashCode 반환 하도록
 		String str = name + age + score;	// 하나의 문자열 "공유43100", "차은우2685", "주지훈2420"
 		return str.hashCode();
 	}
+		
 	
 	@Override
 	public boolean equals(Object obj) {	// 현재객체와 전달받은 객체의 각 필드값이 모두 일치하면 true, 하나라도 일치하지 않으면 false 반환
@@ -91,9 +93,7 @@ public class Student {
 		
 	}
 	*/
-	
-	
-	
+
 	
 	
 }
