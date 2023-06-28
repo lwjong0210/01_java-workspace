@@ -13,12 +13,12 @@ public class PropertiesRun2 {
 		
 		try {
 			// 5. load()
-			//prop.load(InputStream is);
-//			prop.load(new FileInputStream("test.properties"));
-//			System.out.println(prop);
+//			prop.load(InputStream is);
+			prop.load(new FileInputStream("test.properties"));
+			System.out.println(prop);
 			
 			// 6. loadFromXML(InputStream is);
-			prop.loadFromXML(new FileInputStream("test.xml"));
+//			prop.loadFromXML(new FileInputStream("test.xml"));
 			
 			
 		} catch (FileNotFoundException e) {
@@ -27,7 +27,7 @@ public class PropertiesRun2 {
 			e.printStackTrace();
 		}
 		
-		System.out.println(prop);
+//		System.out.println(prop);
 		
 		/*
 		 * *.proterties 를 사용하는 경우

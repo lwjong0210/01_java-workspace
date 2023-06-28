@@ -5,6 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import com.kh.chap03_map.part01_hashMap.model.vo.Snack;
+
 public class PropertiesRun1 {
 
 	// Properties : Map 계열의 컬렉션 => 키 + 벨류 세트로 저장
@@ -13,16 +15,17 @@ public class PropertiesRun1 {
 	public static void main(String[] args) {
 
 		Properties prop = new Properties();
+		
 		/*
 		prop.put("다이제", new Snack("초코맛", 1500));	// value값이 Snack 형임, 나중에 파일 입출력할때 오류남
 		prop.put("새우깡", new Snack("짠맛", 500));
 		
 		System.out.println(prop);
 		System.out.println(prop.get("다이제"));	// get메소드 이용 가능!!
-		
+		*/
 		// 하지만 properties 사용하는 경우 주로 Properties에 담긴 것들을 파일로 출력 또는 입력 받아 올 때 사용함!
 		// 즉, Properties에서 제공하는 store(), load() 메소드를 사용하기 위해서
-		
+		/*
 		try {
 			prop.store(new FileOutputStream("test.properties"), "properties Test");
 			// ClassCastException
